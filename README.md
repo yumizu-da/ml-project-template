@@ -7,7 +7,7 @@
     <img alt="MIT License" src="https://img.shields.io/badge/license-MIT-green?color=5271FF">
 </a>
 <a href="https://github.com/astral-sh/ruff">
-    <img alt="ruff" src="https://img.shields.io/badge/code%20style-ruff-000000.svg?color=5271FF">
+    <img alt="Ruff" src="https://img.shields.io/badge/code%20style-Ruff-000000.svg?color=5271FF">
 </a>
 <a href="https://github.com/python/mypy">
     <img alt="mypy" src="https://img.shields.io/badge/typing-mypy-blue?color=5271FF">
@@ -17,7 +17,27 @@ VSCode × Docker × Pythonでの機械学習リポジトリのテンプレート
 
 ## Environment
 
-### dockerコンテナ ビルド & 起動
+### ローカル環境
+
+uvインストール
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh && exec $SHELL -l
+```
+
+CPU環境用
+
+```bash
+uv python pin "$(cat .python-version)" && uv sync --extra cpu
+```
+
+GPU環境用
+
+```bash
+uv python pin "$(cat .python-version)" && uv sync --extra cuda
+```
+
+### Docker環境
 
 CPU環境用
 
@@ -44,11 +64,11 @@ docker compose up -d --build cuda
 > - `credsStore` -> `credStore`に変更し保存
 > <https://stackoverflow.com/a/74413229>
 
-### コンテナにアタッチ
+#### コンテナにアタッチ
 
 次にVScode左下の`><`ボタンより`コンテナで再度開く`でコンテナにアクセス
 
-### 拡張機能インストール
+#### 拡張機能インストール
 
 無事コンテナが開いたら, 「拡張機能の推奨事項があります」という通知が出ると思います.
 この通知を許可すると, `.vscode/extensions.json`に記載されている拡張機能が自動的にインストールされます.
