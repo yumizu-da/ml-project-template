@@ -19,7 +19,6 @@
 		".mypy_cache": true, // .mypy_cacheを除外
 		".pytest_cache": true, // .pytest_cacheを除外
 		".ruff_cache": true, // .ruff_cacheを除外
-		".venv": true, // .venvを除外
 	},
 	// Workbench settings
 	"workbench.iconTheme": "material-icon-theme", // アイコンテーマ
@@ -38,9 +37,7 @@
 		"editor.tabSize": 4, // タブサイズを4に設定
 		"editor.formatOnSave": true // 保存時にフォーマットを実行
 	},
-	"ruff.lint.args": [
-		"--config=${workspaceFolder}/pyproject.toml", // Ruffの設定はpyproject.tomlに記述したものを採用
-	],
+	"ruff.configuration": "${workspaceFolder}/pyproject.toml", // Ruffの設定ファイルをpyproject.tomlに設定
 	"mypy-type-checker.args": [
 		"--config=${workspaceFolder}/pyproject.toml" // Mypyの設定はpyproject.tomlに記述したものを採用
 	],
