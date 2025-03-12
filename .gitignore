@@ -140,4 +140,5 @@ cython_debug/
 # add
 .ruff_cache/
 .DS_Store
-*csv
+*.csv
+*.pkl
