@@ -1,3 +1,5 @@
+
+
 # ml-project-template
 
 <a href="https://opensource.org/licenses/MIT">
@@ -60,7 +62,7 @@ docker compose up -d --build cuda
 >
 > その場合は以下の手順で`~/.docker/config.json`を修正すると解決できます
 >
-> - `sudo vi ~/.docker/config.json`でファイルを開く
+> - `vi ~/.docker/config.json`でファイルを開く
 > - `credsStore` -> `credStore`に変更し保存
 > <https://stackoverflow.com/a/74413229>
 
